@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+<title>Teacher Dashboard</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm navbar-dark bg-success">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#" th:href="@{/students}">Teacher
+					Dashboard</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+
+				<ul class="nav navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="#"
+						th:href="@{/Home}">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"
+						th:href="@{/About}">About</a></li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	O
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div
+				class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+				<h1 class="text-center">Create New Student</h1>
+				<div class="card-body">
+					<form th:action="@{/students}" th:object="${student}" method="POST">
+						<div class="form-group">
+							<label> Student First Name </label> <input type="text"
+								name="firstName" th:field="*{sFirstName}" class="form-control"
+								placeholder="Enter Student First Name" />
+						</div>
+
+						<div class="form-group">
+							<label> Student Last Name </label> <input type="text"
+								name="lastName" th:field="*{sLastName}" class="form-control"
+								placeholder="Enter Student Last Name" />
+						</div>
+
+						<div class="form-group">
+							<label> Student Email </label> <input type="text" name="email"
+								th:field="*{sUserName}" class="form-control"
+								placeholder="Enter Student Email" />
+						</div>
+
+						<div class="form-group">
+							<label> Student Password </label> <input type="text"
+								name="password" th:field="*{sPassword}" class="form-control"
+								placeholder="Enter Student Password" />
+						</div>
+
+						<div class="box-footer">
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
