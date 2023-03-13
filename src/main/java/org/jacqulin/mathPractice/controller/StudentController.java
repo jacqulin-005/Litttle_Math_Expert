@@ -39,7 +39,7 @@ public class StudentController {
 		return "redirect:/students";
 	}
 
-	@GetMapping("//students/update/{id}")
+	@GetMapping("/students/update/{id}")
 	public String showUpdateStudent(@PathVariable Long id, Model model) {
 
 		//Student student = studentService.getStudentById(id);
@@ -67,13 +67,4 @@ public class StudentController {
 		return "redirect:/students";
 	}
 	
-	@GetMapping("/students/practice/{id}")
-	public String practiceStudent(@PathVariable Long id) {
-		return "practice";
-	}
-	
-	@GetMapping("/students/report/{id}")
-	public String reportStudent(@PathVariable Long id) {
-		return "report";
-	}
 }

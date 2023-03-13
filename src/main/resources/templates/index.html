@@ -32,22 +32,16 @@
 						th:href="@{/Home}">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="#"
 						th:href="@{/About}">About</a></li>
-
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
 					<li class="nav-item"><a class="nav-link" href="#"
 						th:href="@{/students}">Teacher Dashboard</a></li>
 				</ul>
-
-				<ul class="nav navbar-nav">
+				<ul class="nav navbar-nav navbar-right">
 					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	
-	<br>
-	<br>
 	<div class="container">
 		<h1>Welcome To Little Math Expert</h1>
 		<h4>

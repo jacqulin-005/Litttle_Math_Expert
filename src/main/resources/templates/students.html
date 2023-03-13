@@ -30,6 +30,8 @@
 						th:href="@{/Home}">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="#"
 						th:href="@{/About}">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"
+						th:href="@{/Report}">Student Report</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -73,9 +75,9 @@
 						th:href="@{/students/{id}(id=${student.studentId})}"
 						class="btn btn-danger">Delete</a> <a
 						th:href="@{/students/practice/{id}(id=${student.studentId})}"
-						class="btn btn-warning">Practice</a> <a
-						th:href="@{/students/report/{id}(id=${student.studentId})}"
-						class="btn btn-success">Report</a></td>
+						class="btn btn-warning">Practice</a> 
+<!-- 						<a th:href="@{/students/report/{id}(id=${student.studentId})}" -->
+<!-- 						class="btn btn-success">Report</a></td> -->
 				</tr>
 			</tbody>
 		</table>
