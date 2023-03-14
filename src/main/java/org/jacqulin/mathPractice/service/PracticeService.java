@@ -1,7 +1,9 @@
 package org.jacqulin.mathPractice.service;
 
+import java.util.List;
+
 import org.jacqulin.mathPractice.model.Practice;
 
 public interface PracticeService {
-	Practice getQuestionByTopic(Long topicId);
+	List<Practice> getQuestionByTopic(Long topicId);
 }

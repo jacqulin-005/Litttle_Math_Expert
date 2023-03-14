@@ -20,4 +20,5 @@ public class Practice {
 	private Long questionId;
 	private Long topicId;
 	private String question;
+	private String answer;
 }

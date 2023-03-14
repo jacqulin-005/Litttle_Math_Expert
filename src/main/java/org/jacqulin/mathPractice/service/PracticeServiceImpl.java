@@ -1,5 +1,7 @@
 package org.jacqulin.mathPractice.service;
 
+import java.util.List;
+
 import org.jacqulin.mathPractice.model.Practice;
 import org.jacqulin.mathPractice.repository.PracticeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +18,9 @@ public class PracticeServiceImpl implements PracticeService {
 
 	// Getting questions by topic
 	@Override
-	public Practice getQuestionByTopic(Long topicId) {
+	public List<Practice> getQuestionByTopic(Long topicId) {
 		log.info("Questions by Topic");
-		return practiceRepository.findQuestionsByTopicId(topicId);
+		System.out.println(topicId);
+		return practiceRepository.findByTopicId(topicId);
 	}
 }

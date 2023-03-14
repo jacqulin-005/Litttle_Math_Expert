@@ -8,6 +8,7 @@
 
 <link rel="stylesheet" type="text/css"
 	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 
 <title>Little Math Expert</title>
 </head>
@@ -41,13 +42,18 @@
 			</div>
 		</div>
 	</nav>
-	
+		
 	<div class="container">
 		<h1>Welcome To Little Math Expert</h1>
 		<h4>
 			Welcome <span sec:authentication="principal.username">User</span>
 		</h4>
+       
+		<p>Thank you for registering with us. Go ahead and add your students.</p>
+		<p>Your students will love it. We are so happy to see the progress of our Little Math Experts!!!</p>
+		
 	</div>
+	<img th:src="@{/img/indexmath.png}"/>
 
 	<script type="text/javascript"
 		th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>

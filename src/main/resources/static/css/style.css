@@ -1,0 +1,25 @@
+body {
+	background-color: #0C090A;
+}
+
+h1 {
+	color: #eea03a;
+}
+
+h4 {
+	color: #eea03a;
+}
+
+p {
+	color: #eea03a;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+	width: 150px;
+}
