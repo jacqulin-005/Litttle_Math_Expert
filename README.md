@@ -1,2 +1,2 @@
-# Litttle_Math_Expert
+# Little_Math_Expert
 Capstone Project
