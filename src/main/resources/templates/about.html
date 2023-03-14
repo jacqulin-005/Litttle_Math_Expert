@@ -8,6 +8,7 @@
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 
 </head>
 <body>
@@ -33,7 +34,17 @@
 			</ul>
 		</div>
 	</nav>
-	<h1>About Page</h1>
+	<div class="container">
+		<h1>Building Your Students Basic Math Skills</h1>
+		<h4>
+			Welcome <span sec:authentication="principal.username">User</span>
+		</h4>
+       
+		<p>You will get great questions for your students to practice on a daily basis</p>
+		<p>The more your students will practice, the more they will become an experts!!!</p>
+		
+	</div>
+	<img th:src="@{/img/aboutmath.png}"/>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 	<script

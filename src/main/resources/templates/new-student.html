@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" type="text/css"
 	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 <title>Teacher Dashboard</title>
 </head>
 <body>
@@ -74,7 +75,7 @@
 						</div>
 
 						<div class="box-footer">
-							<button type="submit" class="btn btn-primary">Submit</button>
+							<button type="submit" class="btn btn-primary" th:onclick="showAlert()">Submit</button>
 						</div>
 					</form>
 
@@ -82,5 +83,6 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="/js/external.js"></script>
 </body>
 </html>

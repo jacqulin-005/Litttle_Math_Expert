@@ -8,6 +8,7 @@
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 
 </head>
 <body>
@@ -33,7 +34,17 @@
 			</ul>
 		</div>
 	</nav>
-	<h1>Home Page</h1>
+	<div class="container">
+		<h1>Strong Foundation in Basic Math Operations</h1>
+		<h4>
+			Welcome <span sec:authentication="principal.username">User</span>
+		</h4>
+       
+		<p>We are here to make the strong foundation in basic math operation.</p>
+		<p>Your students will be stronger and stronger day by day. Soon they will become experts in basic math operations!!!</p>
+		
+	</div>
+	<img th:src="@{/img/homemath.jpg}"/>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 	<script

@@ -1,6 +1,5 @@
 package org.jacqulin.mathPractice.controller;
 
-import org.jacqulin.mathPractice.exception.StudentNotFoundException;
 import org.jacqulin.mathPractice.model.Student;
 import org.jacqulin.mathPractice.service.StudentService;
 import org.springframework.stereotype.Controller;
