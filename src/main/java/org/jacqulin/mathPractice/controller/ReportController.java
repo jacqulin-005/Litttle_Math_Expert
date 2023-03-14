@@ -19,14 +19,10 @@ public class ReportController {
         return "reports";
     }
     
-    @GetMapping("/students/practice/{id}")
-	public String practiceStudent(@PathVariable Long id) {
-		return "practice";
-	}
-	
 	@GetMapping("/students/report/{id}")
 	public String reportStudent(@PathVariable Long id, Model model) {
 		model.addAttribute("student", reportService.getReportById(id));
 		return "reports";
 	}
+	
 }

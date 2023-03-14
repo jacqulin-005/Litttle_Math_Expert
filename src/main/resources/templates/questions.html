@@ -38,5 +38,27 @@
 			</div>
 		</div>
 	</nav>
+
+	<div class="container">
+		<div class="row">
+			<h1>Welcome Little Math Experts</h1>
+		</div>
+
+		<table class="table table-striped table-bordered">
+			<thead class="table-dark">
+				<tr>
+					<th>Questions</th>
+					<th>Your Answer</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="ques: ${questions}">
+					<td th:text="${ques.question}"></td>
+				</tr>
+			</tbody>
+		</table>		
+	</div>
+
 </body>
 </html>

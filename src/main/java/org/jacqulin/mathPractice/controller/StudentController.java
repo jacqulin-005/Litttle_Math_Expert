@@ -23,7 +23,6 @@ public class StudentController {
 	public String studentList(Model model) {
 		model.addAttribute("students", studentService.getAllStudents());
 		return "students";
-
 	}
 
 	@GetMapping("/students/new")
@@ -64,7 +63,7 @@ public class StudentController {
 	@GetMapping("/students/{id}")
 	public String deleteStudent(@PathVariable Long id) {
 		this.studentService.deleteStudentById(id);
-		return "redirect:/students";
+		return "redirect:/students";		
 	}
 	
 }
