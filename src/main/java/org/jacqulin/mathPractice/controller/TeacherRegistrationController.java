@@ -13,9 +13,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 
 @Controller
 @RequestMapping("/Registration")
+@Slf4j
 public class TeacherRegistrationController {
 
 	@Autowired
@@ -25,12 +27,13 @@ public class TeacherRegistrationController {
 	public TeacherRegistrationDto teacherRegistrationDto() {
 		return new TeacherRegistrationDto();
 	}
-
+	//Retrieving Registration Page
 	@GetMapping
 	public String showRegistrationForm(Model model) {
+		log.info("Registration Page Displayed");
 		return "registration";
 	}
-
+	//Checks for successful registration
 	@PostMapping
 	public String registerUserAccount(@ModelAttribute("teacher") @Valid TeacherRegistrationDto teacherDto,
 			BindingResult result) {
@@ -45,6 +48,7 @@ public class TeacherRegistrationController {
 		}
 
 		teacherService.save(teacherDto);
+		log.info("Registration Success");
 		return "redirect:/Registration?success";
 	}
 }

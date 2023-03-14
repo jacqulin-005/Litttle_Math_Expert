@@ -53,8 +53,9 @@
 			</thead>
 
 			<tbody>
-				<tr th:each="ques: ${questions}">
-					<td th:text="${ques.question}"></td>
+				<tr th:each="quest: ${questionList}">
+					<td th:text="${quest.question}"></td>
+					<td th:text="?" ></td>
 				</tr>
 			</tbody>
 		</table>		

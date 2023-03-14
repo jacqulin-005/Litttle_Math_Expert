@@ -12,12 +12,15 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import lombok.extern.slf4j.Slf4j;
+
 import org.jacqulin.mathPractice.model.Role;
 import org.jacqulin.mathPractice.model.Teacher;
 import org.jacqulin.mathPractice.repository.TeacherRegistrationDto;
 import org.jacqulin.mathPractice.repository.TeacherRepository;
 
 @Service
+@Slf4j
 public class TeacherServiceImpl implements TeacherService {
 	@Autowired
 	private TeacherRepository teacherRepository;
@@ -25,10 +28,13 @@ public class TeacherServiceImpl implements TeacherService {
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
 
+	// Teacher Dashboard
 	public Teacher findByEmail(String email) {
+		log.info("Teacher Dashboard by Email");
 		return teacherRepository.findBytEmail(email);
 	}
 
+	// Teacher Registration
 	public Teacher save(TeacherRegistrationDto registration) {
 		Teacher teacher = new Teacher();
 		teacher.settFirstName(registration.getFirstName());
@@ -37,6 +43,7 @@ public class TeacherServiceImpl implements TeacherService {
 		teacher.settPassword(passwordEncoder.encode(registration.getPassword()));
 		teacher.setSchool(registration.getSchool());
 		teacher.setRoles(Arrays.asList(new Role("ROLE_USER")));
+		log.info("Questions by Topic");
 		return teacherRepository.save(teacher);
 	}
 

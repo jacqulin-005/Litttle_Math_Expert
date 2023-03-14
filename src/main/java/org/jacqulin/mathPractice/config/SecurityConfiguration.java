@@ -10,13 +10,17 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
+import lombok.extern.slf4j.Slf4j;
+
 
 @Configuration
+@Slf4j
 public class SecurityConfiguration {
 
 	@Autowired
 	private TeacherService teacherService;
-
+	
+	//Configuring security
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests().requestMatchers("/Registration**", "/js/**", "/css/**", "/img/**", "/webjars/**")
@@ -24,20 +28,24 @@ public class SecurityConfiguration {
 				.logout().invalidateHttpSession(true).clearAuthentication(true)
 				.logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/Login?logout")
 				.permitAll();
-
+		log.info("Security Configured");
 		return http.build();
 	}
-
+	
+	//Encrypting the password
 	@Bean
 	BCryptPasswordEncoder passwordEncoder() {
+		log.info("Password Encrypted");
 		return new BCryptPasswordEncoder();
 	}
 
+	//DAO Authentication
 	@Bean
 	DaoAuthenticationProvider authenticationProvider() {
 		DaoAuthenticationProvider auth = new DaoAuthenticationProvider();
 		auth.setUserDetailsService(teacherService);
 		auth.setPasswordEncoder(passwordEncoder());
+		log.info("Authentication Provided");
 		return auth;
 	}
 }
