@@ -39,4 +39,14 @@ public class Student {
 
 	@OneToMany(targetEntity = Report.class, cascade = { CascadeType.ALL })
 	private List<Report> reports;
+
+	public Student(Long studentId, String sFirstName, String sLastName, String sUserName, String sPassword) {
+		super();
+		this.studentId = studentId;
+		this.sFirstName = sFirstName;
+		this.sLastName = sLastName;
+		this.sUserName = sUserName;
+		this.sPassword = sPassword;
+	}
+
 }

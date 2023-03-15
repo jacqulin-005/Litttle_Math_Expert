@@ -26,8 +26,8 @@ public class PracticeController {
 	// Addition questions
 	@GetMapping("/Addition")
 	public String additionQuestions(Model model) {
-		final Long id1 = (long) 1;
-		model.addAttribute("questionList", practiceService.getQuestionByTopic(id1));
+		final Long ID1 = (long) 1;
+		model.addAttribute("questionList", practiceService.getQuestionByTopic(ID1));
 		log.info("Addition questions");
 		return "questions";
 	}
@@ -35,8 +35,8 @@ public class PracticeController {
 	// Subtraction questions
 	@GetMapping("/Subraction")
 	public String subtractionQuestions(Model model) {
-		final Long id2 = (long) 2;
-		model.addAttribute("questionList", practiceService.getQuestionByTopic(id2));
+		final Long ID2 = (long) 2;
+		model.addAttribute("questionList", practiceService.getQuestionByTopic(ID2));
 		log.info("Subtraction questions");
 		return "questions";
 	}
@@ -44,8 +44,8 @@ public class PracticeController {
 	// Multiplication questions
 	@GetMapping("/Multiplication")
 	public String multiplicationQuestions(Model model) {
-		final Long id3 = (long) 3;
-		model.addAttribute("questionList", practiceService.getQuestionByTopic(id3));
+		final Long ID3 = (long) 3;
+		model.addAttribute("questionList", practiceService.getQuestionByTopic(ID3));
 		log.info("Multiplication questions");
 		return "questions";
 	}
@@ -53,8 +53,8 @@ public class PracticeController {
 	// Division questions
 	@GetMapping("/Division")
 	public String divisionQuestions(Model model) {
-		final Long id4 = (long) 4;
-		model.addAttribute("questionList", practiceService.getQuestionByTopic(id4));
+		final Long ID4 = (long) 4;
+		model.addAttribute("questionList", practiceService.getQuestionByTopic(ID4));
 		log.info("Division questions");
 		return "questions";
 	}
