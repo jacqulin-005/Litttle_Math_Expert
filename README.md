@@ -3,16 +3,16 @@ Capstone Project - This is a full-stack web application built using the Spring B
 
 # Technologies used
 
-Spring Boot for rapid development and deployment
-Spring security for secure registration and login
-Thymeleaf templating engine for server-side HTML rendering
-Spring Data JPA for database access
-Bootstrap for responsive UI design
+Spring Boot for rapid development and deployment, 
+Spring security for secure registration and login, 
+Thymeleaf templating engine for server-side HTML rendering, 
+Spring Data JPA for database access, 
+Bootstrap for responsive UI design, 
 Maven for build and dependency management
 
 # Requirements
 
-Java Development Kit (JDK) 8 or later
+Java Development Kit (JDK) 8 or later, 
 Apache Maven 3.0 or later
 
 # Configuration
